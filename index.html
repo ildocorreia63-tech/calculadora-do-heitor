@@ -1,81 +1,14 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#a91620">
-  <meta name="description" content="Calculadora do Heitor: contas, tabuada e desafios divertidos de matemática.">
-  <title>Calculadora do Heitor</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="topbar">
-    <a class="brand" href="#" aria-label="Calculadora do Heitor início"><span class="brand-icon">✦</span><span>CALCULADORA <b>DO HEITOR</b></span></a>
-    <div class="top-actions">
-      <button class="icon-btn" id="soundToggle" aria-label="Ativar ou desativar sons" title="Som">🔊</button>
-      <button class="icon-btn" id="backgroundBtn" aria-label="Escolher imagem de fundo" title="Personalizar fundo">🖼️</button>
-      <input type="file" id="backgroundInput" accept="image/*" hidden>
-    </div>
-  </header>
-
-  <main class="app-shell">
-    <section class="hero">
-      <div><span class="eyebrow">APRENDER PODE SER UMA AVENTURA</span><h1>Oi, Heitor! <span>👋</span></h1><p>Vamos brincar com os números?</p></div>
-      <div class="hero-star" aria-hidden="true">★</div>
-    </section>
-
-    <nav class="tabs" aria-label="Atividades">
-      <button class="tab active" data-panel="calculator">🧮 <span>Calculadora</span></button>
-      <button class="tab" data-panel="tables">✖️ <span>Tabuada</span></button>
-      <button class="tab" data-panel="challenge">🏆 <span>Desafios</span></button>
-    </nav>
-
-    <section class="panel active" id="calculator">
-      <div class="calculator-card">
-        <div class="calc-top"><span class="power-dot"></span><span>HEITOR • MATH MACHINE</span><span class="calc-version">MK–01</span></div>
-        <div class="display-wrap">
-          <div class="display-label" id="calcHint">PRONTO PARA CALCULAR</div>
-          <div class="display" id="display" aria-live="polite">0</div>
-        </div>
-        <div class="keypad" id="keypad">
-          <button class="key utility" data-action="clear">AC</button><button class="key utility" data-action="delete">⌫</button><button class="key operator" data-value="%">%</button><button class="key operator" data-value="÷">÷</button>
-          <button class="key" data-value="7">7</button><button class="key" data-value="8">8</button><button class="key" data-value="9">9</button><button class="key operator" data-value="×">×</button>
-          <button class="key" data-value="4">4</button><button class="key" data-value="5">5</button><button class="key" data-value="6">6</button><button class="key operator" data-value="−">−</button>
-          <button class="key" data-value="1">1</button><button class="key" data-value="2">2</button><button class="key" data-value="3">3</button><button class="key operator" data-value="+">+</button>
-          <button class="key zero" data-value="0">0</button><button class="key" data-value=".">,</button><button class="key equals" data-action="equals">=</button>
-        </div>
-        <div class="calc-footer"><span>✦ FEITO PARA DESCOBRIR</span><span>☻ DIVIRTA-SE!</span></div>
-      </div>
-      <p class="helper-text">Dica: use o teclado do aparelho ou toque nos botões coloridos.</p>
-    </section>
-
-    <section class="panel" id="tables">
-      <div class="section-heading"><div><span class="eyebrow">TREINO DOS CAMPEÕES</span><h2>Vamos praticar a tabuada!</h2></div><span class="heading-emoji">🚀</span></div>
-      <div class="practice-card">
-        <label for="tableNumber">Escolha uma tabuada</label>
-        <div class="table-picker"><select id="tableNumber" aria-label="Escolher tabuada"></select><span>×</span><strong>10</strong></div>
-        <div class="table-results" id="tableResults"></div>
-        <button class="primary-btn" id="randomTable">🎲 Sortear uma tabuada</button>
-      </div>
-    </section>
-
-    <section class="panel" id="challenge">
-      <div class="section-heading"><div><span class="eyebrow">MISSÃO MATEMÁTICA</span><h2>Desafio do Heitor</h2></div><span class="heading-emoji">🏅</span></div>
-      <div class="challenge-card">
-        <div class="challenge-stats"><span>⭐ Pontos: <b id="score">0</b></span><span>🔥 Nível: <b id="level">1</b></span><span>❓ <b id="questionCount">0</b>/10</span></div>
-        <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
-        <div class="challenge-content" id="challengeContent">
-          <div class="mission-icon">🧠</div><h3>Preparado para o desafio?</h3><p>Resolva 10 continhas e acumule pontos!</p><button class="primary-btn" id="startChallenge">Começar agora <span>→</span></button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer"><span>❤️ Desenvolvido para o Heitor</span><span>ILCOR-IA • 2026</span></footer>
-  </main>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js"></script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#941b27"><meta name="description" content="Contas, tabuada e desafios divertidos."><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style.css"><title>Calculadora do Heitor</title></head>
+<body><main class="app"><header><div class="logo">H</div><div><small>APRENDER BRINCANDO</small><h1>Calculadora <span>do Heitor</span></h1></div><button id="sound">🔊 Som</button></header>
+<nav><button class="tab active" data-page="calc">🧮 Calculadora</button><button class="tab" data-page="tabuada">✖️ Tabuada</button><button class="tab" data-page="jogo">⭐ Desafios</button></nav>
+<section id="calc" class="page active"><h2>Faça suas contas</h2><div class="calculator"><div class="screen"><small id="expression">Pronto para calcular</small><output id="display">0</output></div><div class="keys">
+<button class="util" data-action="clear">AC</button><button class="util" data-action="del">⌫</button><button class="op" data-value="%">%</button><button class="op" data-value="÷">÷</button>
+<button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button class="op" data-value="×">×</button>
+<button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button class="op" data-value="−">−</button>
+<button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button class="op" data-value="+">+</button>
+<button class="util" data-action="sign">±</button><button data-value="0">0</button><button data-value=".">.</button><button class="equal" data-action="equal">=</button></div></div>
+<div class="tools"><label>🖼️ Escolher fundo <input id="bg" type="file" accept="image/*"></label><button id="reset">Restaurar fundo</button></div></section>
+<section id="tabuada" class="page"><h2>Tabuada interativa</h2><label class="choose">Escolha: <select id="table"></select></label><div id="tableGrid" class="table-grid"></div></section>
+<section id="jogo" class="page"><h2>Desafios de matemática</h2><div class="scores"><div>PONTOS<strong id="score">0</strong></div><div>ACERTOS<strong id="hits">0</strong></div><div>NÍVEL<strong id="level">1</strong></div></div><div class="quiz"><small>RESOLVA A CONTA</small><div id="question" class="question"></div><div id="answers" class="answers"></div><p id="feedback">Escolha uma resposta!</p><button id="next" disabled>Próximo desafio →</button></div></section>
+<footer>Feito para aprender brincando 💛 <b>ILCOR-IA</b></footer></main><script src="script.js"></script></body></html>

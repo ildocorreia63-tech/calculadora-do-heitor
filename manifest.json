@@ -1,14 +1,1 @@
-{
-  "name": "Calculadora do Heitor",
-  "short_name": "Heitor Math",
-  "description": "Calculadora, tabuada e desafios de matemática.",
-  "lang": "pt-BR",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "background_color": "#f7f5ef",
-  "theme_color": "#a91620",
-  "icons": [
-    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
-  ]
-}
+{"name":"Calculadora do Heitor","short_name":"Calculadora","description":"Calculadora, tabuada e desafios de matemática.","start_url":"./","scope":"./","display":"standalone","background_color":"#fff4e6","theme_color":"#941b27","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
